@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tanner | Buros</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")    
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- 	Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Bootstrap 3.3.6 -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+    <link href="~/Content/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Ionicons -->
+    <link href="~/Content/fonts/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- DataTables -->
+    <link href="~/Content/plugins/dataTables.bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- bootstrap datepicker -->
+    <link href="~/Content/plugins/datepicker3.css" rel="stylesheet" type="text/css">
+    <!-- Theme style -->
+    <link href="~/Content/theme/AdminLTE.min.css" rel="stylesheet" type="text/css">
+    <!-- AdminLTE Skins -->
+    <link href="~/Content/theme/skin-blue.css" rel="stylesheet" type="text/css">
+    <!-- Custom style -->
+    <link href="~/Content/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="~/Scripts/plugins/html5shiv/html5shiv.min.js"></script>
+      <script src="~/Scripts/plugins/respond/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="@Url.Action("Index","Home")" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><img class="img-responsive" src="~/img/logo-mini.png" alt="Logo Mini" /></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg">@*<img class="img-responsive" src="~/img/logo.png" alt="Logo" />*@</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Menú Navegación</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                <div class="logo-2"><b>DIALISIS</b></div>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu"> <span class="user"> <img src="~/img/avatar.png" class="user-image" alt="User Image"> <span>Nombre Usuario</span> </span> </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li> <a href="@Url.Action("Logout", "Account")" ><i class="fa fa-sign-out fa-lg"></i></a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="header">MENÚ PRINCIPAL</li>
+                    <li id="Publishing"> <a href="@Url.Action("Index","Publishing")" target="_self"> <i class="fa fa-check-square-o"></i> <span>Menu 01</span> </a> </li>
+                    <li id="Defaulters"> <a href="@Url.Action("Index","Defaulters")" target="_self"><i class="fa fa-adjust"></i> <span>Menu 02</span> </a> </li>
+                    <li id="ParameterLine"> <a href="@Url.Action("Index", "ParameterLine")" target="_self"> <i class="fa fa-sliders"></i> <span>Menu 03</span> </a> </li>
+                    <li id="ParameterBuros"> <a href="@Url.Action("Index", "ParameterBuros")" target="_self"> <i class="fa fa-tasks"></i> <span>Menu 04</span> </a> </li>
+                    <!--Ejemplo submenú -->
+                    @*<li class="treeview active">
+                      <a href="#">
+                        <i class="fa fa-table"></i> <span>Tables</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                      </a>
+                      <ul class="treeview-menu">
+                        <li><a href="simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                        <li class="active"><a href="data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                      </ul>
+                    </li>*@                    
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            @RenderBody()
+            <div id="loading-modal"></div>
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs"> <b>Versión</b> 1.0.0 </div>
+            <strong>DIALISIS</strong> 
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+    <!-- DataTables 
+    <script src="~/Scripts/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/plugins/datatables/dataTables.bootstrap.min.js"></script>-->
+    <!-- bootstrap datepicker -->
+    <script src="~/Scripts/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <!-- SlimScroll -->
+    <script src="~/Scripts/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Scripts/plugins/fastclick/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Scripts/plugins/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/Scripts/plugins/demo.js"></script>
+    <!-- page script -->
+    <script>
+	  //Date picker
+        $('#datepicker').datepicker({
+          autoclose: true
+        });
+    </script>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)    
+</body>
+</html>

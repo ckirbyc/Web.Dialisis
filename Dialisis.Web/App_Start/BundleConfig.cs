@@ -21,9 +21,11 @@ namespace Dialisis.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/plugins/datepicker/locales/bootstrap-datepicker.es.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/toastr.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
