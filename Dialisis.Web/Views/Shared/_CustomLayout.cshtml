@@ -54,7 +54,7 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu"> <span class="user"> <img src="~/img/avatar.png" class="user-image" alt="User Image"> <span>Nombre Usuario</span> </span> </li>
                         <!-- Control Sidebar Toggle Button -->
-                        <li> <a href="@Url.Action("Logout", "Account")" ><i class="fa fa-sign-out fa-lg"></i></a> </li>
+                        <li> <a href="#" onclick="NotificationMsg.success('Cierre sesión exitoso.');" ><i class="fa fa-sign-out fa-lg"></i></a> </li>
                     </ul>
                 </div>
             </nav>
@@ -66,10 +66,10 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
                     <li class="header">MENÚ PRINCIPAL</li>
-                    <li id="Publishing"> <a href="@Url.Action("Index","Publishing")" target="_self"> <i class="fa fa-check-square-o"></i> <span>Menu 01</span> </a> </li>
-                    <li id="Defaulters"> <a href="@Url.Action("Index","Defaulters")" target="_self"><i class="fa fa-adjust"></i> <span>Menu 02</span> </a> </li>
-                    <li id="ParameterLine"> <a href="@Url.Action("Index", "ParameterLine")" target="_self"> <i class="fa fa-sliders"></i> <span>Menu 03</span> </a> </li>
-                    <li id="ParameterBuros"> <a href="@Url.Action("Index", "ParameterBuros")" target="_self"> <i class="fa fa-tasks"></i> <span>Menu 04</span> </a> </li>
+                    <li><a href="@Url.Action("Index","Home")" target="_self"> <i class="fa fa-check-square-o"></i> <span>Menu 01</span> </a> </li>
+                    <li><a href="@Url.Action("Index","Home")" target="_self"><i class="fa fa-adjust"></i> <span>Menu 02</span> </a> </li>
+                    <li><a href="@Url.Action("Index", "Home")" target="_self"> <i class="fa fa-sliders"></i> <span>Menu 03</span> </a> </li>
+                    <li><a href="@Url.Action("Index", "Home")" target="_self"> <i class="fa fa-tasks"></i> <span>Menu 04</span> </a> </li>
                     <!--Ejemplo submenú -->
                     @*<li class="treeview active">
                       <a href="#">
@@ -103,6 +103,7 @@
     <!-- DataTables 
     <script src="~/Scripts/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="~/Scripts/plugins/datatables/dataTables.bootstrap.min.js"></script>-->
+    <script src="~/Scripts/toastr.js"></script>
     <!-- bootstrap datepicker -->
     <script src="~/Scripts/plugins/datepicker/bootstrap-datepicker.js"></script>
     <!-- SlimScroll -->
@@ -114,11 +115,12 @@
     <!-- AdminLTE for demo purposes -->
     <script src="~/Scripts/plugins/demo.js"></script>
     <!-- page script -->
+    <script src="~/Scripts/common/services.js"></script>
     <script>
 	  //Date picker
         $('#datepicker').datepicker({
           autoclose: true
-        });
+        });        
     </script>
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)    

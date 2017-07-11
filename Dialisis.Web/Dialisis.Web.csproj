@@ -280,6 +280,7 @@
     <Content Include="img\logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\common\services.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -292,13 +293,26 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\plugins\app.min.js" />
     <Content Include="Scripts\plugins\bootstrap.min.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_both.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Scripts\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.min.js" />
     <Content Include="Scripts\plugins\datepicker\bootstrap-datepicker.js" />
     <Content Include="Scripts\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
     <Content Include="Scripts\plugins\demo.js" />
+    <Content Include="Scripts\plugins\html5shiv\html5shiv.min.js" />
+    <Content Include="Scripts\plugins\jQuery\jquery-2.2.3.min.js" />
+    <Content Include="Scripts\plugins\respond\respond.min.js" />
+    <Content Include="Scripts\plugins\slimScroll\jquery.slimscroll.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -338,12 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\plugins\datatables\" />
     <Folder Include="Scripts\plugins\fastclick\" />
-    <Folder Include="Scripts\plugins\html5shiv\" />
-    <Folder Include="Scripts\plugins\jQuery\" />
-    <Folder Include="Scripts\plugins\respond\" />
-    <Folder Include="Scripts\plugins\slimScroll\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
